@@ -86,4 +86,38 @@ python extract_features.py \
   --feat_dir features/h5_files \
   --batch_size 256 \
   --encoder UNI2
+```
+
+
+## CLEAR-HPV 
+
+The code to run is inside directory clear-hpv, and we provide the checkpoints for our clsuters and CLAM base model.
+
+## Model Variants
+
+This repository contains multiple concept-discovery models trained on the same
+CLAM backbone and feature set, organized by data split (`s_0` … `s_9`).
+Each model corresponds to a distinct concept-discovery strategy and latent space.
+
+All models use identical:
+- CLAM backbone checkpoints
+- train / test splits
+- evaluation protocol
+
+Differences arise **only** from the concept-discovery method and feature space.
+
+---
+
+### Directory Structure
+
+```text
+checkpoints/
+├── s_0/
+│   ├── encoder/
+│   ├── CLEAR-hpv_rawh/
+│   ├── CLEAR-hpv_awh/
+│   └── Dirichlet/
+├── s_1/
+├── s_2/
+└── ...
 
