@@ -1,0 +1,5 @@
+,train,val,test
+HPV16,77,9,9
+HPV18_45,25,3,3
+OtherHR,15,2,2
+Negative,6,2,1
