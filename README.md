@@ -91,7 +91,7 @@ python extract_features.py \
 
 ## CLEAR-HPV 
 
-The code to run is inside directory clear-hpv, and we provide the checkpoints for our clsuters and CLAM base model.
+The code to run is inside the directory `clear-hpv`, and we provide the checkpoints for our clsuters and CLAM base model as well as the code to train and evaluate the models.
 
 ## Model Variants
 
