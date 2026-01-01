@@ -180,7 +180,8 @@ Typical outputs include:
 
 ---
 
-The demo notebook:
+## The demo:
+To make everything easier, we provide a simple notebook to showcase our CLEAR-HPV usage with demo WSI slides to demostrate our discovered concepts. The notebook we provided,
 - loads a pretrained CLAM checkpoint
 - assigns each tile to a discovered concept using a trained model
 - renders a level-0 spatial overlay and corresponding concept-fraction plot
