@@ -62,7 +62,24 @@ CLEAR-HPV is **annotation-free**, model-agnostic, and compatible with common MIL
 
 ## Feature Extraction with CLAM
 
-CLEAR-HPV uses **CLAM (Clustering-constrained Attention MIL)** as the feature extraction backbone to obtain tile-level embeddings from whole-slide images (WSIs). CLAM provides a standardized and widely adopted pipeline for WSI tiling, feature encoding, and attention-based aggregation, enabling reproducible downstream concept discovery.
+CLEAR-HPV uses **CLAM (Clustering-constrained Attention MIL)** as the feature extraction backbone to obtain tile-level embeddings from whole-slide images (WSIs). CLAM provides a standardized and widely adopted pipeline for WSI tiling, feature encoding, and attention-based aggregation, enabling reproducible downstream concept discovery. 
+
+## Datasets
+
+This project evaluates CLEAR-HPV on the following cohorts:
+
+- **TCGA-HNSCC**
+- **TCGA-CESC**
+- **CPTAC-HNSCC**
+
+### Data access
+
+Raw WSIs and associated metadata can be obtained from the official portals:
+
+- **GDC Data Portal (TCGA)**: https://portal.gdc.cancer.gov  
+- **CPTAC Data Portal**: https://proteomics.cancer.gov/data-portal
+
+After downloading the WSIs, use the provided labels/metadata from `dataset_CSV` (included in this repository) to construct splits and slide-level labels for training and evaluation.
 
 ### WSI Tiling
 

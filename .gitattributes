@@ -1,0 +1,1 @@
+HNSCC_slides/*.svs filter=lfs diff=lfs merge=lfs -text
