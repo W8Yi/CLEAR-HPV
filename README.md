@@ -137,4 +137,54 @@ checkpoints/
 ├── s_1/
 ├── s_2/
 └── ...
+```
 
+## Training and Evaluation (CLEAR-HPV)
+
+CLEAR-HPV provides a simple end-to-end workflow via the scripts in `clear-hpv/`.
+
+### Quick start
+
+From the repository root:
+
+cd clear-hpv
+
+---
+
+## Training
+
+Run python `train_clear.py`:
+
+
+This step:
+- loads slide-level labels from `dataset_CSV`
+- consumes CLAM-extracted tile features (`.h5`)
+- trains concept-discovery models for each split (e.g., `s_0 … s_9`)
+- saves trained models and intermediate outputs to the directories specified at the top of `train.py`
+
+---
+
+## Evaluation
+
+After training completes, Run python `eval.py`:
+
+
+This step:
+- automatically discovers trained models under each split directory
+- evaluates all supported methods using a consistent protocol
+- reports standard metrics (e.g., ACC, AUROC, F1, Recall, Specificity)
+
+Typical outputs include:
+- `per_split.csv`: metrics for each split and method
+- `summary.csv`: mean ± standard deviation across splits
+
+---
+
+The demo notebook:
+- loads a pretrained CLAM checkpoint
+- assigns each tile to a discovered concept using a trained model
+- renders a level-0 spatial overlay and corresponding concept-fraction plot
+
+This notebook is intended for qualitative inspection and does not require running the full training pipeline.
+
+---
