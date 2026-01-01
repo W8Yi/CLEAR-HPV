@@ -181,6 +181,11 @@ Typical outputs include:
 ---
 
 ## The demo:
+
+<p align="center">
+  <img src="image.png" alt="demo overlay plot" width="800"/>
+</p>
+
 To make everything easier, we provide a simple notebook to showcase our CLEAR-HPV usage with demo WSI slides to demostrate our discovered concepts. The notebook we provided,
 - loads a pretrained CLAM checkpoint
 - assigns each tile to a discovered concept using a trained model
